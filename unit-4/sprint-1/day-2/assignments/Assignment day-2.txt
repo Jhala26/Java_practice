@@ -1,0 +1,103 @@
+Q1) Explain Type casting and its types with examples?
+
+Type casting is a way of converting data from one data type to another data type. This process of data conversion is also known as type conversion or type coercion.
+In Java their are two type of typecasting
+
+1) Implicit casting = This type of conversion is also known as widening casting. It happens automatically when converting from a Small range data type to a Large range data type.
+
+Ex =>
+
+package demo;
+
+public class basictry {
+
+	public static void main(String[] args) {
+		byte a = 20;
+		int b = a;
+		double c = b;
+		
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		
+	}
+}
+
+
+2) Explicit type casting = This type of casting involves assigning a data type of high range to a lower range. This process of conversion is also referred to as narrowing type casting.This is done manually as you need to do the casting using the “()” operator. 
+If we fail to do the casting, a compile-time error will be returned by the compiler.
+
+Ex =>
+
+package demo;
+
+public class basictry {
+
+	public static void main(String[] args) {
+		
+		double a = 20.05;
+		float b = (float)a;
+		int c = (int)b;
+		
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		
+	}
+}
+
+
+Q2) Create a class Main with a main method.
+
+package demo;
+
+public class basictry {
+
+	public static void main(String[] args) {
+		
+		String city = "Bangalore";
+		
+		switch(city) {
+		
+		case "Mumbai" : {
+			System.out.println("Financial city");
+			break;
+		}
+		case "Kolkata" :{
+			System.out.println("City of Joy");
+			break;
+		}
+		case "Delhi" :{
+			System.out.println("Capital of the country");
+			break;
+		}
+		case "Bangalore":{
+			System.out.println("Cyber City");
+			break;
+		}
+		default:{
+			System.out.println("May be Other Indian City");
+		}
+		}
+		 
+		 
+
+	}
+}
+
+
+
+Q3) Explain the difference between local and instance variables?
+
+ 1) Instance Variable: These variables are declared within a class but outside a method, constructor, or block and always get a default value.
+    These variables are usually created when we create an object and are destroyed when the object is destroyed.These variables are given a 
+    default value if it is not assigned by code. It is not compulsory to initialize instance variables before use.  
+
+ 2) Local Variable: These variables are declared within a method but do not get any default value. They are usually created when we enter a method or constructor and are destroyed after exiting the block or when the call returns from the method.
+    Its scope is generally limited to a method and its scope starts from the line they are declared. Their scope usually remains there until the closing curly brace of the method comes.
+    The initialization of the local variable is mandatory.
+
+
+ 
+
+

@@ -1,0 +1,67 @@
+Q1) Write the difference between JRE, JDK and JVM?
+
+JDK = JDK is Java Development Kit, it is a software development environment used for making Java applications. JDK is a combination of JRE and Development tools like java compiler, debugger, etc.
+JRE = JRE is a piece of a software which is designed to run other software. It contains the class libraries, loader class, and JVM. In simple terms, if you want to run Java program you need JRE. If you are not a programmer, you don’t need to install JDK, but just JRE to run Java programs.
+JVM = JVM is a part of Java Run Environment (JRE),The full form of JVM is Java Virtual Machine, JVM is an engine that provides a runtime environment to drive the Java Code or applications. It converts Java bytecode into machine language.
+
+
+Q2) Write the difference between JSE, JEE and JME
+
+JSE = java standard edition, JSE. It allows the deployment of java applications used in desktops, servers, embedded environments and real-time environments.  it is a specification, which contains the core libraries to
+develop standalone, networking, database, GUI, multithreaded types of applications.
+
+JEE =  java enterprise edition, JEE. Enterprise Edition helps develop and deploy portable, robust, scalable and secure server-side java applications. Java EE is built on the basis of java SE. It provides Web services, component models, management and communication APIs.
+
+JME = java mirco edition, JME. Provide a robust and flexible environment for applications running on mobile devices and embedded devices such as mobile phones, PDAs, TV set-top boxes, and printers. 
+
+
+Q3) How does java achieve platform independency?
+
+The meaning of platform-independent is that the java compiled byte-code can run on all operating systems. So it is the magic of Bytecode that makes it platform independent .Whenever, a program is written in JAVA, the javac compiles it, The result of the JAVA compiler is the (.class) file or the bytecode,The bytecode generated is a non-executable code and needs an interpreter to execute on a machine. This interpreter is the JVM and thus the Bytecode is executed by the JVM and every OS have its JVM to reun JAVA Code.
+
+
+Q4) What are features of Java and explain them?
+
+1) Simple:- Java is easy to learn and its syntax is quite simple, clean and easy to
+understand.
+
+2) Object-Oriented:- Java is object-oriented, it supports all the OOPS
+characteristics. This makes java applications easy to develop and maintain,
+compared to structured programming language. Because of OOP we can create large code effectively.
+
+3) Portable and Platform Independent:- Java source code is compiled and
+converted into bytecode. this bytecode can run on multiple platforms i.e. Write Once
+and Run Anywhere(WORA), we can compile the java code in one Operating
+System and execute it on another Operating System.
+
+4) Secure:- JAVA has provided an implicit component inside JVM in the form of a
+“Security Manager”  to provide implicit security against malicious code. Java has
+provided very good predefined implementations for almost all well-known network
+security.
+
+5) Robust:- Robust means strong. Java is having a very good memory management
+system in the form of a heap memory management system, it is a dynamic memory
+management system, it allocates and deallocates memory for the objects at
+runtime.
+
+6) Multithreaded:- Java supports multithreading to enhance performance. by using
+this we can execute multiple functionalities simultaneously.
+
+
+Q5) Write a Java Application which prints your details?
+
+
+package demo;
+
+public class basictry {
+
+	public static void main(String[] args) {
+		System.out.println("Name : "+"Anshul Sharma");
+		System.out.println("Father's Name : " + "Narender Kumar Sharma");
+		System.out.println("Mother's Name : " + "Sumitra Sharma");
+		System.out.println("Age : " + 26);
+		System.out.println("Gender : " + "Male");
+		System.out.println("Address : " + "India, Rajasthan, Jaipur");
+		System.out.println("Mobile : " + "9782419584");
+	}
+}
