@@ -1,0 +1,13 @@
+package com.masai4;
+
+public class Laptop {
+
+	String color;
+	String companyName;
+	String name;
+	String purpose;
+	CPU cpu = new CPU();
+	GraphicCard GraphicCard = new GraphicCard();
+	
+	
+}

@@ -1,0 +1,73 @@
+package com.masaiArray;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+//		int[] marks = new int[10];
+		
+//		String[] people = new String[100];
+		
+//		System.out.println("\nA1 : "+ marks);
+//		System.out.println("\nA2 : "+ people);
+		
+//		System.out.println("\nVariavle 1 : "+ people[1]);
+//		System.out.println("\nVariavle 1 : "+ marks[1]);
+//		System.out.println("\nSize of array : "+ people.length+"\n");
+		
+		
+		
+//		marks[0] = 10;
+//		marks[1] = 20;
+//		marks[3] = 30;
+//		marks[4] = 40;
+//		
+//		
+//		for(int i=0;i<marks.length;i++) {
+//			
+//			System.out.print(marks[i] + " ");
+//			
+//		}
+//		
+//		System.out.println("\n");
+//	
+//		String[] people = {"Anshul","Rohit","Shyam","Ganesh","Harsh","Ajay","Vinode","Dev","Sahir","Rajjo","Mathur","Sharma","GOvind"};
+//		
+//		for(int i=0;i<people.length;i++) {
+//			
+//			System.out.println(" ==> " + people[i]);
+//			
+//		}
+		
+		
+		int[] marks =  {10,20,30,20,-10,5,15,-15,16,6,11};
+		
+//		System.out.println(marks[0]);
+//		System.out.println(marks[1]);
+//		System.out.println(marks[2]);
+		
+//		for(int i=0;i<marks.length;i++) {
+//			System.out.print(marks[i]);
+//		}
+		
+		int sum = 0;
+		
+		for(int m:marks) {
+			sum += m;
+		}
+		
+		int num = marks.length;
+		
+		double average = (double)sum/num;
+		
+		System.out.println(average);
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+}

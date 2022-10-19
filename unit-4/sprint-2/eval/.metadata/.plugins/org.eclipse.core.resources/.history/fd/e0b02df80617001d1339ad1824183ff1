@@ -1,0 +1,33 @@
+package com.masai4;
+
+public class Laptop {
+
+	String color;
+	String companyName;
+	String name;
+	String purpose;
+	CPU cpu = new CPU();
+	GraphicCard GraphicCard = new GraphicCard();
+	
+	public void displayDetails() {
+		
+		Laptop lp = new Laptop();
+		
+		System.out.println("Laptop Name =>"+ lp.name);
+		System.out.println("Company name =>"+ lp.companyName);
+		System.out.println("Laptop Color =>"+ lp.color);
+		System.out.println("Laptop Purpose =>"+ lp.purpose);
+		System.out.println("Cpu's Manufacturer =>"+ lp.cpu.manufacturer);
+		System.out.println("Cpu's Processor =>"+ lp.cpu.processor);
+		System.out.println("Cpu's ClockSpeed =>"+ lp.cpu.clockSpeed);
+		System.out.println("Graphic card's Manufacturer =>"+ lp.GraphicCard.manufacturer);
+		System.out.println("Graphic card's Series =>"+ lp.GraphicCard.series);
+		System.out.println("Graphic card's Capacity =>"+ lp.GraphicCard.capacity);
+		
+		
+		
+		
+		
+		
+	}
+}

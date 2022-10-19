@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+D:\masai unit-4\java\sprint-2\day-6\.metadata\.plugins\org.eclipse.jdt.core
+3307678786.index
+1865797976.index
+356877281.index

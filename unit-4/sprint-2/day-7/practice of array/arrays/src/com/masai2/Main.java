@@ -1,0 +1,17 @@
+package com.masai2;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Student[] student = new Student[3];
+		
+		student[0] = new Student(121,"Anshul");
+		student[1] = new Student(122,"Rohit");
+		student[2] = new Student(123,"dev");
+		
+		for(Student s1:student) {
+			s1.print();
+		}
+	}
+	
+}

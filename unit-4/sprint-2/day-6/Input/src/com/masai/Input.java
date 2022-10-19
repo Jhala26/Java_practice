@@ -1,0 +1,66 @@
+package com.masai;
+import java.util.Scanner;
+
+
+public class Input {
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+		
+		 
+		 
+//		 Scanner comm = new Scanner(System.in);
+//		 
+//		
+//		 
+//
+//		comm.nextLine();
+//		 
+//		 System.out.println("Enter Comment...");
+//		 String line = comm.nextLine();
+//		 
+//		 System.out.println("Enter your age");
+//			int age = comm.nextInt();
+//		 
+//		 System.out.println("Enter your name");
+//			
+//			String name = comm.next();
+//		 
+//		 
+//		 System.out.println("My age is : "+ age); 
+//		 System.out.println("Comment : "+ line);
+//		
+//		 System.out.println("My name is : " + name);
+		 
+		 		 
+//		 Scanner into = new Scanner(System.in);
+//		 
+//		 float x = into.nextFloat();
+//		 System.out.println("Value of pi is : "+ x);
+		 
+		
+		
+		Scanner value = new Scanner(System.in);
+		
+		System.out.println("Enter the number of matrix");
+		
+		int n1 = value.nextInt();
+		int n2 = value.nextInt();
+		int n3 = value.nextInt();
+		
+		value.nextLine();
+		
+		int n4 = value.nextInt();
+		int n5 = value.nextInt();
+		int n6 = value.nextInt();
+		
+		System.out.println(n1 + " " + n2+ " "+n3);
+		System.out.println(n4 + " " + n5+ " "+n6);
+		
+ 		
+	}
+
+}

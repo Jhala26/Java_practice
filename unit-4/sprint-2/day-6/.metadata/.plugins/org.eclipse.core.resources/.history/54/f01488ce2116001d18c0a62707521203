@@ -1,0 +1,19 @@
+package com.masai;
+
+public class Stringee {
+	
+	 Stringee(String s) {
+		
+	}
+
+	
+	public static void main(String[] args) {
+		String st = new String("Welcome");
+		String st1 = "Welcome";
+		
+		System.out.println(st);
+		System.out.println(st1);
+		System.out.println(st == st1);
+	}
+	
+}

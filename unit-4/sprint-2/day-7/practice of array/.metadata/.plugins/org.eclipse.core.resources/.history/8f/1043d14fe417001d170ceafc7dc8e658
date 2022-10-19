@@ -1,0 +1,35 @@
+package com.masaiArray;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		int[] marks = new int[10];
+		
+		String[] people = new String[100];
+		
+		System.out.println("\nA1 : "+ marks);
+		System.out.println("\nA2 : "+ people);
+		
+		System.out.println("\nVariavle 1 : "+ people[1]);
+		System.out.println("\nVariavle 1 : "+ marks[1]);
+		System.out.println("\nSize of array\n : "+ people.length);
+		
+		
+		
+		marks[0] = 10;
+		marks[1] = 20;
+		marks[3] = 30;
+		marks[4] = 40;
+		
+		
+		for(int i=0;i<marks.length;i++) {
+			
+			System.out.print(marks[i] + " ");
+			
+		}
+		
+		
+	}
+	
+}

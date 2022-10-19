@@ -1,0 +1,16 @@
+package com.masaiArray;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		
+		int[] marks = {};
+		String[] people = new String[100];
+		
+		System.out.println("\nA1 : "+ marks);
+		System.out.println("\nA2 : "+ people);
+		
+		System.out.println("\nVariavle 1 : "+ people[1]);
+	}
+	
+}

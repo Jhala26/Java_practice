@@ -1,0 +1,510 @@
+Arrays in java:--
+-------------------
+
+----to hold multiple data of the same type. 
+
+--In Java arrays are treated as a special type of object whose class is non-existance.
+
+
+	int[] arr= new int[5]; 
+	//5 int variable is created with thier default value as an array obj.
+
+
+	System.out.println(arr);// [I@42343243
+
+Note: array variable is a reference variable which will hold object of an array.
+
+
+		int[] arr= new int[5]; 
+		
+		System.out.println(arr);// [I@42343243
+		System.out.println(arr[0]);//0
+		System.out.println(arr[3]);//0
+		System.out.println(arr.length);
+		System.out.println(arr[6]);//AIOBE
+
+
+example2:
+
+		//declaring an integer array
+		int[] arr= new int[5]; 
+		
+		//reassinging value to the each element of an array
+		arr[0] =10;
+		arr[1] =20;
+		arr[4] =40;
+		
+//		for(int i=0; i<arr.length;i++) {
+//			
+//			System.out.println(arr[i]);
+//		}
+		
+		
+		for(int i:arr) {
+			System.out.println(i);
+		}
+		
+
+another syntax:
+===============
+
+
+		int[] arr= {10,20,30,40,50};
+		
+		for(int i:arr) {
+			System.out.println(i);
+		}
+		
+		
+difference:
+--------------
+
+		int[] arr1;
+		arr1=new int[5];  //valid
+		
+		
+		int[] arr2;		
+		arr2= {10,20,30,40,50};  //invalid
+
+
+
+example2:
+
+
+
+		int[] arr= new int[3]; 
+		// in this single statement we have created total 4 variables
+		
+		1. arr --ref variable
+		2.arr[0] -- primitive variable int type
+		3.arr[1] -- primitive variable int type
+		4.arr[2] -- primitive variable int type
+		
+		
+Array of object:
+============
+
+
+		A[] arr = new A[5];
+
+		//A a1, a2, a3;
+		
+		1.arr --ref variable of array type object
+		2.arr[0] -- ref variable A type with default value = null
+		3.arr[1] -- ref variable A type with default value = null
+		4.arr[2] -- ref variable A type with default value = null
+				
+
+example1:
+
+	
+//		A[] arr = new A[3];
+//		
+//		arr[0] = new A();
+//		arr[1] = new A();
+//		arr[2] = new A();
+//		
+//		for(A a1:arr) {
+//			a1.funA();
+//		}
+//		
+		//shortcut approach		
+		A[] arr = {new A(),new A(), new A(),new A()};
+		
+		for(A a1:arr) {
+			
+			a1.funA();
+		}
+		
+
+exmaple2:
+
+		String[] cities= {"Delhi","pune","mumbai","chennai"};
+
+		
+		for(String city: cities) {
+			
+			System.out.println(city.toUpperCase());
+		}
+		
+
+
+array as a method parameter:
+------------------------------------
+
+ex1:
+
+
+package com.masai;
+
+public class Demo {
+	
+	
+	void fun1(int[] arr) {
+		
+		System.out.println("inside fun1 of Demo");
+	}
+	
+
+	public static void main(String[] args) {
+	
+		Demo d1= new Demo();
+		
+		//here we can pass 2 possible value
+		//1. null default value for any ref variable
+		//2. int array object, (loaded or without loaded)
+		d1.fun1(10);
+		
+		
+	}
+
+}
+
+
+example2:
+-----------
+
+package com.masai;
+
+public class Demo {
+	
+	
+	void fun1(int[] arr) {
+		
+		if(arr != null) {
+		System.out.println("inside fun1 of Demo");
+		
+		for(int i:arr) {
+			System.out.println(i);
+		}
+		}
+		else
+			System.out.println("null is not allowed");
+		
+		
+	}
+	
+
+	public static void main(String[] args) {
+	
+		Demo d1= new Demo();
+		
+		//int[] arr5= new int[3];
+		
+		int[] arr5= {20,30,40,50};
+		
+		d1.fun1(arr5);
+		//d1.fun1(null);
+		
+		
+	}
+
+}
+
+
+
+
+example3:
+
+
+package com.masai;
+
+public class Demo {
+	
+	
+	void fun1(int[] marks) {
+		
+		if(marks != null) {
+		
+		System.out.println("inside fun1() of Demo");
+		
+		int total =0;
+		
+		for(int m:marks) {
+			total += m;
+		}
+		
+		
+		System.out.println("Total is :"+total);
+		}
+		else
+			System.out.println("null is not allowed");
+		
+		
+	}
+	
+
+	public static void main(String[] args) {
+	
+		Demo d1= new Demo();
+		
+		int[] nums= {100,120,150,180,200};
+		
+		d1.fun1(nums);
+		
+		
+		
+		
+		
+		
+	}
+
+}
+
+
+Exampl4:
+========
+
+
+package com.masai;
+
+import java.util.Scanner;
+
+public class Demo {
+	
+	
+	void fun1(Student[] students) {
+	
+		if(students != null) {
+		
+		System.out.println("inside fun1() of Demo");
+		
+			for(Student student:students) {
+				
+				System.out.println("Roll is :"+student.getRoll());
+				System.out.println("Name is :"+student.getName());
+				System.out.println("Marks is :"+student.getMarks());
+				
+				System.out.println("================================");
+			}
+			
+			
+		}else
+			System.out.println("null not allowed...");
+		
+	}
+	
+
+	public static void main(String[] args) {
+	
+		Demo d1= new Demo();
+		
+		Scanner sc= new Scanner(System.in);
+		
+		System.out.println("How many Student ?");
+		int num= sc.nextInt();
+		
+		Student[] students = new Student[num];//3
+		
+		
+		for(int i=0;i<students.length;i++) {
+			
+			System.out.println("Enter Details of Student "+(i+1));
+			
+			System.out.println("Enter roll:");
+			int roll= sc.nextInt();
+			
+			System.out.println("Enter Name");
+			String name= sc.next();
+			
+			System.out.println("Enter Marks");
+			int marks= sc.nextInt();
+			
+			//students[i]= new Student(roll, name, marks);
+			students[i] = new Student();
+			students[i].setRoll(roll);
+			students[i].setName(name);
+			students[i].setMarks(marks);
+			
+		}
+		
+		
+		
+		d1.fun1(students);
+		
+		
+	}
+
+}
+
+
+
+array as return type:
+===============
+
+package com.masai;
+
+public class Demo {
+	
+	
+	Student[] getStudents(String username, String password){
+		
+		if(username.equals("admin") && password.equals("123")) {
+			
+			//we can connect with DB and get multiple Student object from the DB and return them
+			//in the form an array.
+			
+			//Student array is created with size 3
+			Student[] students= new Student[3];
+			
+			
+			//each student variable is initialized with Student class object
+			students[0]=new Student(10, "N1", 780);
+			students[1]=new Student(12, "N2", 680);
+			students[2]=new Student(14, "N3", 880);
+				
+			return students;
+		
+		}
+		else
+			return null;
+
+		
+	}
+	
+	
+	
+
+	public static void main(String[] args) {
+	
+			
+		Demo d1 = new Demo();
+		
+		//Object obj=  d1.getStudents("admin", "123");
+		
+		Student[] students=  d1.getStudents("admin", "123");
+		
+		if(students !=null) {
+			
+			
+			for(Student student: students) {
+				
+				System.out.println("Roll is :"+student.getRoll());
+				System.out.println("Name is :"+student.getName());
+				System.out.println("Marks is :"+student.getMarks());
+				
+				System.out.println("======================");
+			}
+			
+			
+			
+			
+			
+			
+		}else
+			System.out.println("invalid username or password..");
+				
+	}
+
+}
+
+
+
+A[] arr= new A[10];  // class A 10 variable, with null value
+//total 11 variable created 1.arr and 10. A class variable
+
+
+
+2d Array:
+========
+
+--In Java multi-dimentional array is treated as array of array.
+
+
+example:
+
+		int[][] arr= new int[3][2];
+		
+		System.out.println(arr);//[[I@
+		
+		System.out.println(arr.length);//3
+
+		System.out.println(arr[0]);//[I@3432432
+		
+		System.out.println(arr[0].length);
+
+		System.out.println(arr[0][1]);//0
+		
+
+
+example :
+
+
+package com.masai;
+
+public class Demo {
+		
+	public static void main(String[] args) {
+	
+		
+		int[][] arr= new int[4][4];
+		
+		for(int i=0;i<arr.length;i++) {
+			
+			for(int j=0;j<arr[i].length;j++) {
+				
+				arr[i][j]=j;
+				
+			}	
+		}
+		
+		
+		for(int[] ar:arr) {
+			
+			for(int i:ar) {
+				System.out.print(i);
+			}
+			System.out.println();
+		}
+		
+		
+		
+		
+	}
+
+}
+
+
+
+Command Line Arguments:
+=======================
+
+--JVM will call the main method initialy by suppying empty String array object.
+
+--at the time of running our application though the CLA what ever value we will
+supply (space seperated), that value will be loaded into that String array object.
+
+--and that argument is called as CLA, which is available to our application
+in the form of String array.
+
+
+ex:
+
+			 //loaded string array obj 
+			//String[] names= {"Ram","Amit","Ravi"};
+			
+			//default value of any ref variable
+			//String[] names= null;
+			
+		
+			//empty String array
+			String[] names= {};   // jvm will pass this obj
+			or
+			//String[] names= new String[0];
+			
+
+
+
+example:
+
+
+		System.out.println(args);//address of String array obj
+		System.out.println(args.length);//0
+
+		System.out.println(args[0]);//AIOBE
+
+
+
+
+
+

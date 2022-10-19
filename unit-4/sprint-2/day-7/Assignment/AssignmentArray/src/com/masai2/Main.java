@@ -1,0 +1,39 @@
+package com.masai2;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("\nEnter no of rows : ");
+		int n = sc.nextInt();
+		System.out.println("Enter no of Columns : ");
+		int m = sc.nextInt();
+		
+		
+		int[][] arr = new int[n][m]; 
+		
+		for(int i=0;i<n;i++) {
+			for(int j=0;j<m;j++) {
+				arr[i][j] = sc.nextInt();
+			}
+			System.out.println();
+		}
+		
+		System.out.println("\nOutput : ");
+		
+		for(int i=0;i<n;i++) {
+			int evn =0;
+			for(int j=0;j<m;j++) {
+				if(arr[j][i] % 2 == 0) {
+					evn += arr[j][i];
+				}
+				
+			}
+			System.out.println(evn);
+		}
+		
+		
+	}
+	
+}

@@ -1,0 +1,32 @@
+package com.masai;
+
+public class Demo {
+
+	
+public static void main(String[] args) {
+		
+		
+		
+		Demo d1 = new Demo();
+		
+		
+		
+		d1=null;
+		
+		Demo d2 = new Demo();
+		
+		
+		String s1 = "Welcome";
+		
+		System.out.println(System.identityHashCode(s1));
+		
+		s1= null;
+		
+		
+		String s2 = "Welcome";	
+		
+		System.out.println(System.identityHashCode(s2));
+				
+	}
+	
+}

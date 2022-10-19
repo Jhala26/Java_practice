@@ -1,0 +1,42 @@
+package com.masai2;
+import java.util.Scanner;;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner value = new Scanner(System.in);
+		Student s1 = new Student();
+		
+		System.out.println("Enter Number of Students you want to enter");
+		int n = value.nextInt();
+		for(int i=0;i<n;i++) {
+			System.out.println("Enter the Roll Number :");
+			int roll = value.nextInt();
+			
+//			value.nextLine();
+			
+			System.out.println("Enter the Name :");
+			String  name = value.nextLine();
+			
+			System.out.println("Enter the Marks :");
+			int marks = value.nextInt();
+			
+			s1.setRollNumber(roll);
+			s1.setStudentName(name);
+			s1.setMarks(marks);
+			s1.
+			
+			System.out.println("Student Detail 0" + i);
+			System.out.println("Student Roll Number: "+ s1.getRollNumber());
+			System.out.println("Student Name: "+ s1.getStudentName());
+			System.out.println("Student Mark : "+ s1.getMarks());
+			s1.
+			
+		}
+		
+		
+
+	}
+
+}

@@ -1,0 +1,33 @@
+package com.masai;
+import java.util.Scanner;
+
+
+public class Input {
+	
+	public static void main(String[] args) {
+		
+		
+		Scanner value = new Scanner(System.in);
+		
+		System.out.println("Enter your name");
+		
+		String name = value.nextLine();
+		 System.out.println("My name is : " + name);
+		 
+		 Scanner comm = new Scanner(System.in);
+		 String line = comm.nextLine();
+		 System.out.println("Comment : "+ line);
+		 
+		 
+		 int age = value.nextInt();
+		 System.out.println("My age is : "+ age);
+		 
+		 Scanner into = new Scanner(System.in);
+		 
+		 float x = into.nextFloat();
+		 System.out.println("Value of pi is : "+ x);
+		 
+ 		
+	}
+
+}

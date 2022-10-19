@@ -1,0 +1,11 @@
+package com.masai2;
+
+public class Student {
+
+	public int roll;
+	public String name;
+	
+	public void print(int roll, String name) {
+		
+	}
+}

@@ -1,0 +1,33 @@
+package com.masai5;
+import java.util.Scanner;
+
+public class Main {
+	
+	Employee Employee = new Employee();
+
+	public static Employee getEmployeeDetails() {
+		
+		Main e1 = new Main();
+		Scanner value = new Scanner(System.in);
+		System.out.println("Enter id : ");
+		e1.employeeId = value.nextInt();
+		
+		value.nextLine();
+		System.out.println("Enter Name : ");
+		e1.Employee.employeeName = value.nextLine();
+		System.out.println("Enter Salary : ");
+		e1.Employee.salary = value.nextDouble();
+		System.out.println("Enter PF : ");
+		int per = value.nextInt();
+		e1.Employee.calculateNetSalary(per);
+		
+		
+		return e1.Employee;
+	}
+	
+	public static void main(String[] args) {
+		
+
+	}
+
+}
